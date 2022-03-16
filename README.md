@@ -57,8 +57,7 @@ Similar to model 1 except increase the number of neurons and reduce epochs
 
 Recommendation:
 Since by design the ReLU activation function is unbounded in the positive domain. A further reading indicates that some form of weight regularization will help prevent potential numerical problems which will intern promote additional sparsity. Also, since the features in this project work are quite complex and not very much related the sigmoid function even though produced an accuracy of 73.2% it cannot learn complex mapping hence its deficiency for this model. The use of Convolutional Neural Networks (CNN) might be appropriate.
-Challenges:
-1.	Having challenges running TensorFlow on local machine and most of the job done in google Colab. Hence the only way is to download and save or screenshot for visualization.
+
 
 ## Authors
 
