@@ -1,20 +1,13 @@
-# Deep-Learning-
-Charity Funding Predictor
 
-TOPIC: Charity Funding Predictor
+# Charity Funding Predictor Using Neural Networks
 
-Overview
+This research aims to develop a binary classifier that can predict whether or not applicants will be successful if they are sponsored by Alphabet Soup.
+To achieve success, increasingly complex methodologies were applied to model patterns in the quest for greater performance and a business case.
+However, the realism afforded by these models comes at the expense of increased computing complexity.
+This work report looks at how neural networks can be used to help design the organization's future. 
 
-This project work seeks to use binary classifier that will be capable of predicting whether applicants will be successful if funded by Alphabet Soup. In the quest for better performance and a business case, increasingly complex methods are being used to model patterns to achieve success. The realism, however provided by these models comes at a cost of greater computational complexity. This work report explores the use of neural networks to help shape the organization going forward.
-
-Data Processing
-
-Data was provided in csv format for this work:
-
-In order to process and work on the data, a Jupyter Notebook was combined with Google Colab since most of the libraries were not adaptable to my computer in this case. However, screenshots and tables were downloaded to give more insight and clarity.
-
+## Tech Stack
 Libraries:
-
 •	Pandas to read and create data frames
 •	Seaborn for visualization
 •	Sklearn for training and testing and standardizing data
@@ -22,6 +15,42 @@ Libraries:
 •	Keras tuner for hyper parameter optimization
 •	Keras layer dense to create sequential model
 
-Data cleaning:
 
-The raw data consists of 34299 names with 12 features in columns. A look at the datatypes and unique columns as shown below gives an idea as to how to clean and process the data.
+## Optimizations
+
+Model 1:
+Assumptions
+1.  Reduce unique categories of Application type to 10 by creating a bin
+2.	Reduce categories column to less than 800
+
+Model 2:
+Assumptions
+1.	Reduce unique categories on Application type further to those less than 5 by creating a bin
+2.	Slash classification to less than 1800
+3.	Filter names with income amount greater than or equal to 10000.
+
+Model 3:
+Assumption
+Leave all features and categories as describe in dataset.
+
+Model 4:
+Similar to model 1 except increase the number of neurons and reduce epochs
+
+
+## Lessons Learned
+
+Recommendation:
+Since by design the ReLU activation function is unbounded in the positive domain. A further reading indicates that some form of weight regularization will help prevent potential numerical problems which will intern promote additional sparsity. Also, since the features in this project work are quite complex and not very much related the sigmoid function even though produced an accuracy of 73.2% it cannot learn complex mapping hence its deficiency for this model. The use of Convolutional Neural Networks (CNN) might be appropriate.
+Challenges:
+1.	Having challenges running TensorFlow on local machine and most of the job done in google Colab. Hence the only way is to download and save or screenshot for visualization.
+
+## Authors
+
+- [@maxwellansah](https://github.com/maximum-boop/Charity-Funding-Predictor)
+
+
+## Acknowledgements
+
+ - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+ 
+- Google Colab
